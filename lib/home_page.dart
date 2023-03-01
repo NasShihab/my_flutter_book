@@ -15,11 +15,12 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home Page'),
         backgroundColor: Colors.green[900],
-        foregroundColor: Colors.tealAccent,
+        foregroundColor: Colors.white,
         centerTitle: true,
       ),
       body: SafeArea(
         child: ListView(
+          padding: const EdgeInsets.symmetric(vertical: 5),
           children: [
             homeButton(
               context,
