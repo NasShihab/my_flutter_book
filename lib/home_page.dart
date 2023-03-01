@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'custom_button.dart';
-
-//// get: ^4.6.5
+import 'package:my_flutter_book/getx_slider/getx_slider.dart';
+import 'package:my_flutter_book/splash_screen_stateful/splash_screen_st.dart';
+import 'package:my_flutter_book/z_other/navigation_page.dart';
+import 'z_other/custom_button.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,22 +12,22 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home Page'),
+        backgroundColor: Colors.green[900],
+        foregroundColor: Colors.tealAccent,
         centerTitle: true,
       ),
       body: SafeArea(
         child: ListView(
           children: [
-            customButton(
+            homeButton(
+              context,
               title: 'Splash Screen Stateful',
-              onPressed: () {
-                Navigator.pushNamed(context, '/splash_screen_st');
-              },
+              pageName: const SplashScreenSt(),
             ),
-            customButton(
+            homeButton(
+              context,
               title: 'GetX Slider',
-              onPressed: () {
-                Navigator.pushNamed(context, '/getx_slider');
-              },
+              pageName: GetxSliders(),
             ),
           ],
         ),
@@ -34,3 +35,15 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+Widget homeButton(
+  BuildContext context, {
+  required String title,
+  required Widget pageName,
+}) =>
+    customButton(
+      title: title,
+      onPressed: () {
+        myNavigationPush(context, pageName: pageName);
+      },
+    );

@@ -4,8 +4,8 @@ import 'controller.dart';
 
 // get: ^4.6.5
 
-class GetxSlider extends StatelessWidget {
-  GetxSlider({super.key});
+class GetxSliders extends StatelessWidget {
+  GetxSliders({super.key});
 
   final controller = ImgController();
 
