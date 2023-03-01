@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'notification_widget.dart';
+import 'tab_barr_widget.dart';
 
 class TabBarr extends StatelessWidget {
   const TabBarr({Key? key}) : super(key: key);
