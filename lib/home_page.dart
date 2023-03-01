@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_book/getx_slider/getx_slider.dart';
+import 'package:my_flutter_book/rest_api_call/api_page.dart';
 import 'package:my_flutter_book/splash_screen_stateful/splash_screen_st.dart';
 import 'package:my_flutter_book/tab_bar_view/tab_barr.dart';
 import 'package:my_flutter_book/z_other/navigation_page.dart';
@@ -24,6 +25,11 @@ class HomePage extends StatelessWidget {
               context,
               title: 'GetX Slider',
               pageName: GetxSliders(),
+            ),
+            homeButton(
+              context,
+              title: 'Rest API Call',
+              pageName: const ApiPage(),
             ),
             homeButton(
               context,
