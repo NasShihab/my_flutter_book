@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_flutter_book/getx_slider/getx_slider.dart';
 import 'package:my_flutter_book/splash_screen_stateful/splash_screen_st.dart';
+import 'package:my_flutter_book/tab_bar_view/tab_barr.dart';
 import 'package:my_flutter_book/z_other/navigation_page.dart';
 import 'z_other/custom_button.dart';
 
@@ -21,13 +22,18 @@ class HomePage extends StatelessWidget {
           children: [
             homeButton(
               context,
+              title: 'GetX Slider',
+              pageName: GetxSliders(),
+            ),
+            homeButton(
+              context,
               title: 'Splash Screen Stateful',
               pageName: const SplashScreenSt(),
             ),
             homeButton(
               context,
-              title: 'GetX Slider',
-              pageName: GetxSliders(),
+              title: 'Tab Bar View',
+              pageName: const TabBarr(),
             ),
           ],
         ),
