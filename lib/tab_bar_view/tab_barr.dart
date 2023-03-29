@@ -28,7 +28,7 @@ class TabBarr extends StatelessWidget {
                       color: Colors.black,
                     ),
                   ),
-                  Icon(
+                  const Icon(
                     Icons.more_vert,
                     size: 28,
                     color: Colors.black,
