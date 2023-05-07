@@ -13,4 +13,5 @@ List<PageList> pageData = [
   PageList('Rest Api Call', '/api_page'),
   PageList('Splash Screen Stateful', '/splash_screen_st'),
   PageList('Tab Bar View', '/tabbarr'),
+  PageList('Url Launcher', '/url_launch'),
 ];

@@ -4,6 +4,7 @@ import 'package:my_flutter_book/home_page.dart';
 import 'package:my_flutter_book/rest_api_call/api_page.dart';
 import 'package:my_flutter_book/splash_screen_stateful/splash_screen_st.dart';
 import 'package:my_flutter_book/tab_bar_view/tab_barr.dart';
+import 'package:my_flutter_book/url_launcher/url_launcher.dart';
 
 var myRoutes = <String, WidgetBuilder>{
   '/': (context) => const HomePage(),
@@ -11,4 +12,5 @@ var myRoutes = <String, WidgetBuilder>{
   '/getx_slider': (context) => GetxSliders(),
   '/api_page': (context) => const ApiPage(),
   '/tabbarr': (context) => const TabBarr(),
+  '/url_launch': (context) => const UrlLauncher(),
 };

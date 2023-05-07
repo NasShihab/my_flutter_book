@@ -12,24 +12,21 @@ class TabBarr extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           bottom: const TabBar(
-              labelColor: Colors.black,
-              labelStyle: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-              tabs: [
-                Tab(text: 'All'),
-                Tab(text: 'Mentioned'),
-                Tab(text: 'Detail'),
-              ]),
-          backgroundColor: Colors.transparent,
-          title: const FittedBox(
-            fit: BoxFit.fitWidth,
-            child: Text(
-              'Tab Bar',
-              style: TextStyle(fontSize: 24, color: Colors.black),
+            labelStyle: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
             ),
+            tabs: [
+              Tab(text: 'All'),
+              Tab(text: 'Mentioned'),
+              Tab(text: 'Detail'),
+            ],
           ),
+          title: const Text(
+            'Tab Bar',
+            style: TextStyle(fontSize: 24),
+          ),
+          centerTitle: true,
           elevation: 0,
           leading: IconButton(
             onPressed: () {
@@ -37,7 +34,6 @@ class TabBarr extends StatelessWidget {
             },
             icon: const Icon(
               Icons.keyboard_arrow_left,
-              color: Colors.black,
             ),
           ),
         ),

@@ -10,8 +10,6 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home Page'),
-        backgroundColor: Colors.green[900],
-        foregroundColor: Colors.white,
         centerTitle: true,
       ),
       body: SafeArea(
