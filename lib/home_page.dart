@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_flutter_book/getx_slider/getx_slider.dart';
-import 'package:my_flutter_book/rest_api_call/api_page.dart';
-import 'package:my_flutter_book/splash_screen_stateful/splash_screen_st.dart';
-import 'package:my_flutter_book/tab_bar_view/tab_barr.dart';
-import 'package:my_flutter_book/z_other/navigation_page.dart';
+import 'package:my_flutter_book/data_page.dart';
 import 'z_other/custom_button.dart';
 
 class HomePage extends StatelessWidget {
@@ -20,28 +16,24 @@ class HomePage extends StatelessWidget {
       ),
       body: SafeArea(
         child: ListView(
-          padding: const EdgeInsets.symmetric(vertical: 5),
           children: [
-            homeButton(
-              context,
-              title: 'GetX Slider',
-              pageName: GetxSliders(),
-            ),
-            homeButton(
-              context,
-              title: 'Rest API Call',
-              pageName: const ApiPage(),
-            ),
-            homeButton(
-              context,
-              title: 'Splash Screen Stateful',
-              pageName: const SplashScreenSt(),
-            ),
-            homeButton(
-              context,
-              title: 'Tab Bar View',
-              pageName: const TabBarr(),
-            ),
+            Center(
+              child: Wrap(
+                children: List.generate(
+                  pageData.length,
+                  (index) => Column(
+                    children: [
+                      homeButton(
+                        context,
+                        title: pageData[index].title,
+                        pageName: pageData[index].pageName.toString(),
+                      ),
+                      const SizedBox(height: 5),
+                    ],
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
@@ -52,11 +44,13 @@ class HomePage extends StatelessWidget {
 Widget homeButton(
   BuildContext context, {
   required String title,
-  required Widget pageName,
+  required String pageName,
 }) =>
     customButton(
+      width: MediaQuery.of(context).size.height * .9,
       title: title,
       onPressed: () {
-        myNavigationPush(context, pageName: pageName);
+        // myNavigationPush(context, pageName: pageName);
+        Navigator.pushNamed(context, pageName);
       },
     );
